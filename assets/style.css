@@ -1,1 +1,54 @@
+/* colors */
+/* general styling of elements */
+body {
+  margin: 0;
+  padding: 0;
+}
+.header,
+.nav,
+.aside,
+.content,
+.footer {
+  padding: 20px;
+  color: #000;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: normal;
+}
+.header {
+  background-color: #DAF7DC;
+  grid-area: header;
+}
+.nav {
+  background-color: #86BBD8;
+  grid-area: nav;
+}
+.content {
+  background-color: #2F4858;
+  grid-area: content;
+}
+.aside {
+  background-color: #9EE493;
+  grid-area: aside;
+}
+.footer {
+  background-color: #DAF7DC;
+  grid-area: footer;
+}
+.grid-parent {
+  display: grid;
+  gap: 15px;
+  margin: 20px;
+  height: 100vh;
+  grid-template-areas: 'header header header' 'nav content aside' 'nav footer footer';
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+@media (max-width: 768px) {
+  .grid-parent {
+    grid-template-areas: 'header' 'nav' 'content' 'aside' 'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+  }
+}
 /*# sourceMappingURL=./style.css.map */
